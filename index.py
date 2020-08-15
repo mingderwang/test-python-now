@@ -10,5 +10,10 @@ class HelloWorld(Resource):
 
 api.add_resource(HelloWorld, '/')
 
+@app.route('/test')
+def test_msg():
+    message = "This is a test message"
+    return message
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=80)
